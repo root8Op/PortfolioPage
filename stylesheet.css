@@ -1,0 +1,10 @@
+*{
+    padding:0;
+    margin: 0;
+}
+.head{
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    background-image: url(#);
+}
