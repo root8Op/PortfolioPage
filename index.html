@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width"> 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Home.parichayah</title>
 </head>
 <body>
 <!-- head of the webpage starts from here -->
-        <header> 
-            <video class="mainFrame-video" autoplay muted loop>
-                <source  src="Assets/Seq22.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <nav>
+    <header>            
+        <nav >
+                <div id="logo"><a href="" draggable="false"><img src="Assets/bb4.png" draggable="false" alt="logo"></a></div>
+                <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12 font-medium text-[16px]">
+                        <li><a href="#" draggable="false">Home</a></li>
+                        <li><a href="#" draggable="false">About</a></li>
+                        <li><a href="#" draggable="false">Projects</a></li>
+                        <li><a href="#" draggable="false">Contact</a></li>
+                </ul>
+        </nav>
+        <div class="absolute inset-0 z-0 mainFrame" id="mainFrame">
+                <!-- <img class="img1" draggable="false" src="Assets/project-mainSec.jpg" alt="background image"> -->
+                <h1>Gree tings</h1>
+                <img draggable="false" src="assets/Transformer.png" alt="model" class="img2">
+        </div>
+        
+    </header>
 
-                <H1><a href="">Parichaya<img src="Assets/parichaya.png" alt="logo"></a></H1>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-            </nav>
-            <img src="" alt="">
-            <!-- <h1>HARSHIT GUPTA</h1>
-            <P>I used to enjoy complexions and working hard for my profession.
-                I also love the logic and structure of coding and 
-                always strive to write elegant and efficent code, whether it be HTML, CSS and Javascript.
-                When I'm not codding, you'll find me learning something new, training or analyzing.</P> -->
-        </header>
 <!-- head of the webpage ends here -->
 
 <!-- body of the webpage starts from here -->
-    <section class="page2"></section>
+    <section class="page2">
+        <div class="profile">
+            <img src="#" alt="profile image" class="profileImg ">
+            <div class="profileText">
+                <p>Web Developer</p>
+                <h1>Harshit Gupta</h1>
+                <p>intro...</p>
+                <p>bornIn</p>
+                <h3>India</h3>
+                <p>Date of Birth</p>
+                <h3>01 November 2004</h3>
+            </div>
+        </div>
+    </section>
 <!-- body of the webpage ends here -->
 
 
@@ -43,5 +54,7 @@
 
 
 <script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

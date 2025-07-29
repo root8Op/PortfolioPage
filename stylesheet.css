@@ -4,27 +4,72 @@
     padding:0;
     margin: 0;
 }
+
+
 header{
     width: 100%;
     height: fit-content;
     top: 0;
-    color:#ffffff;
     font-family: 'Helvetica Neue', sans-serif;
 }
+.mainFrame{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.mainFrame h1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: 600;
+    color: #b40000;
+    text-align: center;
+    z-index: -1; /* Ensures the text is above the video */
+    opacity: 0;
+    animation: fadeSlideUp 1.5s ease-out forwards;
+}
 
-.mainFrame-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures the video covers the entire screen */
-      z-index: -1; /* Places the video behind other content */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 30%);
     }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.mainFrame .img2{
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    height: 520px;
+    animation: onlyGlow 2s ease-in-out infinite;
+}
+
+@keyframes onlyGlow {
+    0% {
+        filter: drop-shadow(0 0 0px #effffd);
+    }
+    50% {
+        filter: drop-shadow(0 0 60px #effffd);
+    }
+    100% {
+        filter: drop-shadow(0 0 0px #effffd);
+    }
+}
 
 nav{
     position: absolute;
+    background-color: #b40000;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,13 +81,16 @@ nav{
     z-index: 1; /* Ensures the nav is above the video */
 }
 
-header h1 img{
-    width: 30px;
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    gap: 0;
+}
+
+nav #logo {
+    width: 150px;
     height: 30px;
     margin-left: 80px;
 }
-
-header h1{
-    font-size: 30px;
-    font-weight: 600;
-}   
