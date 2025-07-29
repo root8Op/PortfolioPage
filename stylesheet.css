@@ -81,6 +81,11 @@ nav{
     z-index: 1; /* Ensures the nav is above the video */
 }
 
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 header h1 {
     display: flex;
     align-items: center;
@@ -93,4 +98,35 @@ nav #logo {
     width: 150px;
     height: 30px;
     margin-left: 80px;
+}
+
+.page2{
+    background-color: #b40000;
+    color: #effffd;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding-top: 60px;
+}
+
+.page2 p{
+    font-size: 16px;
+    color: #00b4b4;
+}
+
+.page2 h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #effffd;
+    text-align: center;
+}
+
+.profile{
+    margin-top: 60px;
+    position: relative;
+}
+
+.profile img{
+    border-radius: 20px;
+    border: 1px solid #effffd;
+    margin-left: 80px;
+    filter: drop-shadow(0 0 10px #effffd);
 }

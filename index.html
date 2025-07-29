@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width"> 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" type="image/x-icon" href="Assets/bb1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -17,14 +18,14 @@
                 <div id="logo"><a href="" draggable="false"><img src="Assets/bb4.png" draggable="false" alt="logo"></a></div>
                 <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12 font-medium text-[16px]">
                         <li><a href="#" draggable="false">Home</a></li>
-                        <li><a href="#" draggable="false">About</a></li>
+                        <li><a href="#about" draggable="false">About</a></li>
                         <li><a href="#" draggable="false">Projects</a></li>
                         <li><a href="#" draggable="false">Contact</a></li>
                 </ul>
         </nav>
         <div class="absolute inset-0 z-0 mainFrame" id="mainFrame">
                 <!-- <img class="img1" draggable="false" src="Assets/project-mainSec.jpg" alt="background image"> -->
-                <h1>Gree tings</h1>
+                <h1>Greetings</h1>
                 <img draggable="false" src="assets/Transformer.png" alt="model" class="img2">
         </div>
         
@@ -33,17 +34,31 @@
 <!-- head of the webpage ends here -->
 
 <!-- body of the webpage starts from here -->
+ 
     <section class="page2">
+
+        <!-- profile section starts here -->
         <div class="profile">
-            <img src="#" alt="profile image" class="profileImg ">
-            <div class="profileText">
-                <p>Web Developer</p>
-                <h1>Harshit Gupta</h1>
-                <p>intro...</p>
+            <div class="profileText1 text-wrap text-center grid grid-cols-3 flex-col">
+                <div class="nameOccu">               
+                    <p class="left font-medium">Web Developer</p>
+                    <h1 class="left">Harshit Gupta</h1>
+                </div> 
+                <img src="Assets/profilePortfolio.jpg" draggable="false" alt="profile image" class="profileImg img-fluid rounded-circle img-thumbnail img-responsive ">
+                <p class="right">intro...</p>
+            </div>
+
+        <!-- profile text 2 starts here -->
+
+            <div class="profileText2">
                 <p>bornIn</p>
                 <h3>India</h3>
                 <p>Date of Birth</p>
                 <h3>01 November 2004</h3>
+            </div>
+        <!-- profile text 2 ends here -->
+            <div class="about" id="about">
+                <h1>About</h1>
             </div>
         </div>
     </section>
