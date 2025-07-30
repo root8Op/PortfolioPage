@@ -34,7 +34,7 @@ header{
     z-index: 1; /* Ensures the text is above the video */
     opacity: 0;
     animation: fadeSlideUp 1.5s ease-out forwards;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.588);
 }
 
 @keyframes fadeSlideUp {
@@ -54,12 +54,7 @@ header{
     top: 25%;
     height: 520px;
 }
-.mainFrame .img2:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    filter: brightness(1.2);
-    filter: drop-shadow(0 0 10px #b40000);
-}
+
 
 .mainFrame .img3 {
     position: absolute;
@@ -132,7 +127,7 @@ nav{
 nav ul{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 60px;
 }
 header h1 {
     display: flex;
@@ -189,4 +184,393 @@ nav #logo {
 .about{
     margin-top: 60px;
     text-align: center;
+}
+/* left upper icons code and alignment */
+.LefticonsGrp .upperIcon1 {
+    position: absolute;
+    top: 46%;
+    left: 17%;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+/* All icons start at the same spot, only htmlIcon is visible */
+#htmlIcon, #photoshopIcon, #vsCodeIcon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 0;
+    transition: 
+        opacity 0.3s,
+        left 0.3s,
+        top 0.3s,
+        z-index 0s;
+    cursor: pointer;
+}
+
+#htmlIcon {
+    z-index: 3;
+}
+
+#photoshopIcon,
+#vsCodeIcon {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* When .show-others is active, fan out the icons */
+.LefticonsGrp .upperIcon1.show-others #photoshopIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: -30px;   /* Move left for gap */
+    top: 0;
+    z-index: 2;
+}
+
+.LefticonsGrp .upperIcon1.show-others #vsCodeIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: -84px;    /* Move right for gap */
+    top: 0;
+    z-index: 1;
+}
+
+.LefticonsGrp .upperIcon1 img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s, filter 0.2s;
+    left: 0;
+}
+
+#htmlIcon {
+    top: 0;
+    z-index: 3;
+}
+
+#photoshopIcon {
+    top: 0;   
+    z-index: 2;
+}
+
+/* Hide all except htmlIcon */
+#photoshopIcon,
+#vsCodeIcon {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#vsCodeIcon {
+    top: 0;   
+    z-index: 1;
+}
+
+.LefticonsGrp .upperIcon1 img:hover {
+    transform: scale(1.15) rotate(-8deg);
+    filter: drop-shadow(0 0 18px #b40000);
+}
+
+.LefticonsGrp .upperIcon1.show-others #photoshopIcon,
+.LefticonsGrp .upperIcon1.show-others #vsCodeIcon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* right upper icons code and alignment */
+
+.RighticonsGrp .upperIcon2 {
+    position: absolute;
+    top: 34%;
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+/* All icons start at the same spot, only cssIcon is visible */
+#cssIcon, #davinciIcon, #tailwindCssIcon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 0;
+    transition: 
+        opacity 0.3s,
+        left 0.3s,
+        top 0.3s,
+        z-index 0s;
+    cursor: pointer;
+}
+
+#cssIcon {
+    z-index: 3;
+}
+
+#davinciIcon,
+#tailwindCssIcon {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* When .show-others is active, fan out the icons */
+.RighticonsGrp .upperIcon2.show-others2 #davinciIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: 90px;   /* Move left for gap */
+    top: 0;
+    z-index: 2;
+}
+
+.RighticonsGrp .upperIcon2.show-others2 #tailwindCssIcon{
+    opacity: 1;
+    pointer-events: auto;
+    left: 150px;   /* Move left for gap */
+    top: 0;
+    z-index: 1;
+}
+
+.RighticonsGrp .upperIcon2 img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s, filter 0.2s;
+    left: 0;
+}
+
+#cssIcon {
+    top: 0;
+    z-index: 3;
+}
+
+#davinciIcon {
+    top: 0;   
+    z-index: 2;
+}
+
+/* Hide all except cssIcon */
+#davinciIcon,
+#tailwindCssIcon {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#tailwindCssIcon {
+    top: 0;   
+    z-index: 1;
+}
+
+.RighticonsGrp .upperIcon2 img:hover {
+    transform: scale(1.15) rotate(-8deg);
+    filter: drop-shadow(0 0 18px #b40000);
+}
+
+.RighticonsGrp .upperIcon2.show-others2 #davinciIcon,
+.RighticonsGrp .upperIcon2.show-others2 #tailwindCssIcon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/* left lower  icons code and alignment */
+
+
+
+.LefticonsGrp .lowerIcon1 {
+    position: absolute;
+    top: 80%;
+    left: 24%;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+/* All icons start at the same spot, only Js icon is visible */
+#jsIcon, #nodeJsIcon, #expressIcon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 0;
+    transition: 
+        opacity 0.3s,
+        left 0.3s,
+        top 0.3s,
+        z-index 0s;
+    cursor: pointer;
+}
+
+#jsIcon {
+    z-index: 3;
+}
+
+#nodeJsIcon,
+#expressIcon {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* When .show-others is active, fan out the icons */
+.LefticonsGrp .lowerIcon1.show-others3 #nodeJsIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: -90px;   /* Move left for gap */
+    top: 0;
+    z-index: 2;
+}
+
+.LefticonsGrp .lowerIcon1.show-others3 #expressIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: -30px;    /* Move right for gap */
+    top: 0;
+    z-index: 1;
+}
+
+.LefticonsGrp .lowerIcon1 img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s, filter 0.2s;
+    left: 0;
+}
+
+#jsIcon {
+    top: 0;
+    z-index: 3;
+}
+
+#nodeJsIcon {
+    top: 0;   
+    z-index: 2;
+}
+
+/* Hide all except JsIcon */
+#nodeJsIcon,
+#expressIcon {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#expressIcon {
+    top: 0;   
+    z-index: 1;
+}
+
+.LefticonsGrp .lowerIcon1 img:hover {
+    transform: scale(1.15) rotate(-8deg);
+    filter: drop-shadow(0 0 18px #b40000);
+}
+
+.LefticonsGrp .lowerIcon1.show-others3 #nodeJsIcon,
+.LefticonsGrp .lowerIcon1.show-others3 #expressIcon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* right lower icons code and alignment */
+
+
+.RighticonsGrp .lowerIcon2 {
+    position: absolute;
+    top: 74%;
+    left: 68%;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+/* All icons start at the same spot, only webIcon is visible */
+#webIcon, #portfolioIcon, #premiereIcon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 0;
+    transition: 
+        opacity 0.3s,
+        left 0.3s,
+        top 0.3s,
+        z-index 0s;
+    cursor: pointer;
+}
+
+#webIcon {
+    z-index: 3;
+}
+
+#portfolioIcon,
+#premiereIcon {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* When .show-others is active, fan out the icons */
+.RighticonsGrp .lowerIcon2.show-others4 #portfolioIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: 90px;   /* Move left for gap */
+    top: 0;
+    z-index: 2;
+}
+
+.RighticonsGrp .lowerIcon2.show-others4 #premiereIcon {
+    opacity: 1;
+    pointer-events: auto;
+    left: 150px;   /* Move left for gap */
+    top: 0;
+    z-index: 1;
+}
+
+.RighticonsGrp .lowerIcon2 img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s, filter 0.2s;
+    left: 0;
+}
+
+#webIcon {
+    top: 0;
+    z-index: 3;
+}
+
+#portfolioIcon {
+    top: 0;   
+    z-index: 2;
+}
+
+/* Hide all except webIcon */
+#portfolioIcon,
+#premiereIcon {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#premiereIcon {
+    top: 0;   
+    z-index: 1;
+}
+
+.RighticonsGrp .lowerIcon2 img:hover {
+    transform: scale(1.15) rotate(-8deg);
+    filter: drop-shadow(0 0 18px #b40000);
+}
+
+.RighticonsGrp .lowerIcon2.show-others4 #portfolioIcon,
+.RighticonsGrp .lowerIcon2.show-others4 #premiereIcon {
+    opacity: 1;
+    pointer-events: auto;
 }
