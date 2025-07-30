@@ -31,9 +31,10 @@ header{
     font-weight: 600;
     color: #b40000;
     text-align: center;
-    z-index: -1; /* Ensures the text is above the video */
+    z-index: 1; /* Ensures the text is above the video */
     opacity: 0;
     animation: fadeSlideUp 1.5s ease-out forwards;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes fadeSlideUp {
@@ -48,24 +49,71 @@ header{
 }
 
 .mainFrame .img2{
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 25%;
     height: 520px;
-    animation: onlyGlow 2s ease-in-out infinite;
+}
+.mainFrame .img2:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    filter: brightness(1.2);
+    filter: drop-shadow(0 0 10px #b40000);
 }
 
-@keyframes onlyGlow {
-    0% {
-        filter: drop-shadow(0 0 0px #effffd);
-    }
-    50% {
-        filter: drop-shadow(0 0 60px #effffd);
-    }
-    100% {
-        filter: drop-shadow(0 0 0px #effffd);
-    }
+.mainFrame .img3 {
+    position: absolute;
+    top: 36%;      /* Move to left shoulder */
+    left: 20%;     /* Adjust left for shoulder */
+    width: 290px;
+    height: auto;
+    z-index: 1;    /* Above model */
+    opacity: 0.8;
+    filter: drop-shadow(0 0 12px #b40000);
+    transform: rotate(36deg);
 }
+
+.mainFrame .img4 {
+    position: absolute;
+    top: 48%;      /* Move to right shoulder */
+    left: 54%;     /* Adjust left for shoulder */
+    width: 290px;
+    height: auto;
+    z-index: 1;    /* Above model */
+    opacity: 0.8;
+    filter: drop-shadow(0 0 12px #b40000);
+    transform: rotate(-32deg);
+}
+
+.mainFrame .img5 {
+    position: absolute;
+    top: 66%;
+    left: 28%;
+    width: 240px;
+    height: auto;
+    z-index: 1;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #b40000);
+    transform: rotate(14deg);
+}
+
+.mainFrame .img6 {
+    position: absolute;
+    top: 75%;
+    left: 52%;
+    width: 240px;
+    height: auto;
+    z-index: 1;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #b40000);
+    transition: transform 0.3s, filter 0.3s;
+}
+.mainFrame .img6:hover {
+    transform: scale(1.07) rotate(4deg);
+    filter: drop-shadow(0 0 24px #b40000);
+}
+
+
 
 nav{
     position: absolute;
@@ -109,7 +157,8 @@ nav #logo {
 
 .page2 p{
     font-size: 16px;
-    color: #00b4b4;
+    color: #d26666;
+    line-height: 1.5;
 }
 
 .page2 h1{
@@ -125,8 +174,19 @@ nav #logo {
 }
 
 .profile img{
+    width:220px;
+    height: 200px;
     border-radius: 20px;
     border: 1px solid #effffd;
     margin-left: 80px;
     filter: drop-shadow(0 0 10px #effffd);
+}
+
+.profileText2{
+    padding-top: 60px;
+}
+
+.about{
+    margin-top: 60px;
+    text-align: center;
 }
