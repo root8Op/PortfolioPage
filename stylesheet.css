@@ -11,6 +11,7 @@ header{
     height: fit-content;
     top: 0;
     font-family: 'Helvetica Neue', sans-serif;
+
 }
 .mainFrame{
     position: relative;
@@ -20,16 +21,38 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('Assets/abstract-perspective-pattern-grid-white-background-design-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0; /* Ensures the video is below the text */
 }
 
-.mainFrame h1{
+.overlay{
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensures the overlay is above the video */
+    
+
+}
+
+.overlay h1{
+    position: absolute;
+    top: 40%;
+    left: 65%;
     transform: translate(-50%, -50%);
-    font-size: 100px;
+    font-size: 68px;
     font-weight: 600;
-    color: #b40000;
+    color: #ffffff;
+    -webkit-text-stroke: 2px #b40000;
     text-align: center;
     z-index: 1; /* Ensures the text is above the video */
     opacity: 0;
@@ -48,66 +71,105 @@ header{
     }
 }
 
+.overlay p{
+    position: absolute;
+    top: 60%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 500;
+    color: #b40000;
+    width: 400px;
+    text-align: left;
+    z-index: 1; /* Ensures the text is above the video */
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out forwards;
+}
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.overlay button{
+    position: absolute;
+    top: 78%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #b40000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Ensures the button is above the video */
+    opacity: 0;
+    animation: fadeInButton 1.5s ease-out forwards;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.overlay button a{
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.overlay button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+.overlay button:hover img{
+    transform: translateX(5px);
+}
+.overlay button:hover{
+    background-color: #d26666; /* Change to a lighter shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
 .mainFrame .img2{
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: 25%;
-    height: 520px;
-}
-
-
-.mainFrame .img3 {
-    position: absolute;
-    top: 36%;      /* Move to left shoulder */
-    left: 20%;     /* Adjust left for shoulder */
-    width: 290px;
-    height: auto;
-    z-index: 1;    /* Above model */
-    opacity: 0.8;
-    filter: drop-shadow(0 0 12px #b40000);
-    transform: rotate(36deg);
-}
-
-.mainFrame .img4 {
-    position: absolute;
-    top: 48%;      /* Move to right shoulder */
-    left: 54%;     /* Adjust left for shoulder */
-    width: 290px;
-    height: auto;
-    z-index: 1;    /* Above model */
-    opacity: 0.8;
-    filter: drop-shadow(0 0 12px #b40000);
-    transform: rotate(-32deg);
-}
-
-.mainFrame .img5 {
-    position: absolute;
-    top: 66%;
-    left: 28%;
-    width: 240px;
-    height: auto;
-    z-index: 1;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #b40000);
-    transform: rotate(14deg);
-}
-
-.mainFrame .img6 {
-    position: absolute;
-    top: 75%;
-    left: 52%;
-    width: 240px;
-    height: auto;
-    z-index: 1;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #b40000);
+    height: 420px;
+    left: 20%;
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
     transition: transform 0.3s, filter 0.3s;
 }
-.mainFrame .img6:hover {
-    transform: scale(1.07) rotate(4deg);
-    filter: drop-shadow(0 0 24px #b40000);
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
 
 
 nav{
@@ -147,7 +209,7 @@ nav #logo {
     background-color: #b40000;
     color: #effffd;
     font-family: 'Helvetica Neue', sans-serif;
-    padding-top: 60px;
+    padding-top: 100px;
 }
 
 .page2 p{
@@ -184,393 +246,4 @@ nav #logo {
 .about{
     margin-top: 60px;
     text-align: center;
-}
-/* left upper icons code and alignment */
-.LefticonsGrp .upperIcon1 {
-    position: absolute;
-    top: 46%;
-    left: 17%;
-    width: 100px;
-    height: 100px;
-    z-index: 10;
-}
-
-/* All icons start at the same spot, only htmlIcon is visible */
-#htmlIcon, #photoshopIcon, #vsCodeIcon {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 26px;
-    top: 0;
-    transition: 
-        opacity 0.3s,
-        left 0.3s,
-        top 0.3s,
-        z-index 0s;
-    cursor: pointer;
-}
-
-#htmlIcon {
-    z-index: 3;
-}
-
-#photoshopIcon,
-#vsCodeIcon {
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* When .show-others is active, fan out the icons */
-.LefticonsGrp .upperIcon1.show-others #photoshopIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: -30px;   /* Move left for gap */
-    top: 0;
-    z-index: 2;
-}
-
-.LefticonsGrp .upperIcon1.show-others #vsCodeIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: -84px;    /* Move right for gap */
-    top: 0;
-    z-index: 1;
-}
-
-.LefticonsGrp .upperIcon1 img {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    transition: transform 0.2s, filter 0.2s;
-    left: 0;
-}
-
-#htmlIcon {
-    top: 0;
-    z-index: 3;
-}
-
-#photoshopIcon {
-    top: 0;   
-    z-index: 2;
-}
-
-/* Hide all except htmlIcon */
-#photoshopIcon,
-#vsCodeIcon {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-#vsCodeIcon {
-    top: 0;   
-    z-index: 1;
-}
-
-.LefticonsGrp .upperIcon1 img:hover {
-    transform: scale(1.15) rotate(-8deg);
-    filter: drop-shadow(0 0 18px #b40000);
-}
-
-.LefticonsGrp .upperIcon1.show-others #photoshopIcon,
-.LefticonsGrp .upperIcon1.show-others #vsCodeIcon {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-
-/* right upper icons code and alignment */
-
-.RighticonsGrp .upperIcon2 {
-    position: absolute;
-    top: 34%;
-    left: 70%;
-    width: 100px;
-    height: 100px;
-    z-index: 10;
-}
-
-/* All icons start at the same spot, only cssIcon is visible */
-#cssIcon, #davinciIcon, #tailwindCssIcon {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 26px;
-    top: 0;
-    transition: 
-        opacity 0.3s,
-        left 0.3s,
-        top 0.3s,
-        z-index 0s;
-    cursor: pointer;
-}
-
-#cssIcon {
-    z-index: 3;
-}
-
-#davinciIcon,
-#tailwindCssIcon {
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* When .show-others is active, fan out the icons */
-.RighticonsGrp .upperIcon2.show-others2 #davinciIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: 90px;   /* Move left for gap */
-    top: 0;
-    z-index: 2;
-}
-
-.RighticonsGrp .upperIcon2.show-others2 #tailwindCssIcon{
-    opacity: 1;
-    pointer-events: auto;
-    left: 150px;   /* Move left for gap */
-    top: 0;
-    z-index: 1;
-}
-
-.RighticonsGrp .upperIcon2 img {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    transition: transform 0.2s, filter 0.2s;
-    left: 0;
-}
-
-#cssIcon {
-    top: 0;
-    z-index: 3;
-}
-
-#davinciIcon {
-    top: 0;   
-    z-index: 2;
-}
-
-/* Hide all except cssIcon */
-#davinciIcon,
-#tailwindCssIcon {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-#tailwindCssIcon {
-    top: 0;   
-    z-index: 1;
-}
-
-.RighticonsGrp .upperIcon2 img:hover {
-    transform: scale(1.15) rotate(-8deg);
-    filter: drop-shadow(0 0 18px #b40000);
-}
-
-.RighticonsGrp .upperIcon2.show-others2 #davinciIcon,
-.RighticonsGrp .upperIcon2.show-others2 #tailwindCssIcon {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-
-
-/* left lower  icons code and alignment */
-
-
-
-.LefticonsGrp .lowerIcon1 {
-    position: absolute;
-    top: 80%;
-    left: 24%;
-    width: 100px;
-    height: 100px;
-    z-index: 10;
-}
-
-/* All icons start at the same spot, only Js icon is visible */
-#jsIcon, #nodeJsIcon, #expressIcon {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 26px;
-    top: 0;
-    transition: 
-        opacity 0.3s,
-        left 0.3s,
-        top 0.3s,
-        z-index 0s;
-    cursor: pointer;
-}
-
-#jsIcon {
-    z-index: 3;
-}
-
-#nodeJsIcon,
-#expressIcon {
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* When .show-others is active, fan out the icons */
-.LefticonsGrp .lowerIcon1.show-others3 #nodeJsIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: -90px;   /* Move left for gap */
-    top: 0;
-    z-index: 2;
-}
-
-.LefticonsGrp .lowerIcon1.show-others3 #expressIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: -30px;    /* Move right for gap */
-    top: 0;
-    z-index: 1;
-}
-
-.LefticonsGrp .lowerIcon1 img {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    transition: transform 0.2s, filter 0.2s;
-    left: 0;
-}
-
-#jsIcon {
-    top: 0;
-    z-index: 3;
-}
-
-#nodeJsIcon {
-    top: 0;   
-    z-index: 2;
-}
-
-/* Hide all except JsIcon */
-#nodeJsIcon,
-#expressIcon {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-#expressIcon {
-    top: 0;   
-    z-index: 1;
-}
-
-.LefticonsGrp .lowerIcon1 img:hover {
-    transform: scale(1.15) rotate(-8deg);
-    filter: drop-shadow(0 0 18px #b40000);
-}
-
-.LefticonsGrp .lowerIcon1.show-others3 #nodeJsIcon,
-.LefticonsGrp .lowerIcon1.show-others3 #expressIcon {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-
-/* right lower icons code and alignment */
-
-
-.RighticonsGrp .lowerIcon2 {
-    position: absolute;
-    top: 74%;
-    left: 68%;
-    width: 100px;
-    height: 100px;
-    z-index: 10;
-}
-
-/* All icons start at the same spot, only webIcon is visible */
-#webIcon, #portfolioIcon, #premiereIcon {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 26px;
-    top: 0;
-    transition: 
-        opacity 0.3s,
-        left 0.3s,
-        top 0.3s,
-        z-index 0s;
-    cursor: pointer;
-}
-
-#webIcon {
-    z-index: 3;
-}
-
-#portfolioIcon,
-#premiereIcon {
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* When .show-others is active, fan out the icons */
-.RighticonsGrp .lowerIcon2.show-others4 #portfolioIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: 90px;   /* Move left for gap */
-    top: 0;
-    z-index: 2;
-}
-
-.RighticonsGrp .lowerIcon2.show-others4 #premiereIcon {
-    opacity: 1;
-    pointer-events: auto;
-    left: 150px;   /* Move left for gap */
-    top: 0;
-    z-index: 1;
-}
-
-.RighticonsGrp .lowerIcon2 img {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    transition: transform 0.2s, filter 0.2s;
-    left: 0;
-}
-
-#webIcon {
-    top: 0;
-    z-index: 3;
-}
-
-#portfolioIcon {
-    top: 0;   
-    z-index: 2;
-}
-
-/* Hide all except webIcon */
-#portfolioIcon,
-#premiereIcon {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-#premiereIcon {
-    top: 0;   
-    z-index: 1;
-}
-
-.RighticonsGrp .lowerIcon2 img:hover {
-    transform: scale(1.15) rotate(-8deg);
-    filter: drop-shadow(0 0 18px #b40000);
-}
-
-.RighticonsGrp .lowerIcon2.show-others4 #portfolioIcon,
-.RighticonsGrp .lowerIcon2.show-others4 #premiereIcon {
-    opacity: 1;
-    pointer-events: auto;
 }
