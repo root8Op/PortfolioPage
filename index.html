@@ -9,22 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home.parichayah</title>
+    
 </head>
 <body>
 <!-- head of the webpage starts from here -->
-    <header>            
-        <nav >
-                <div id="logo"><a href="" draggable="false"><img src="Assets/bb4.png" draggable="false" alt="logo"></a></div>
+    <header id="header" class="header"> 
+
+        <a href="" draggable="false"><img src="Assets/bb4.png" draggable="false" alt="logo" class="logo"></a>
+        <nav >  
                 <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12 font-medium text-[16px]">
                         <li><a href="#home" draggable="false">Home</a></li>
                         <li><a href="#about" draggable="false">About</a></li>
                         <li><a href="#projects" draggable="false">Projects</a></li>
-                        <li><a href="#contact" draggable="false">Contact</a></li>
+                        <li><a href="#contact" draggable="false">Connect</a></li>
                 </ul>
         </nav>
         <div class="absolute inset-0 z-0 mainFrame" id="mainFrame">
-                <div class="overlay">
                     <h1 class="greetings">Greetings</h1>
                     <p>Crafting digital experiences with code and creativity.
                     <br>Let's build something amazing together!</p>
@@ -34,8 +36,8 @@
                             <img src="Assets/right-arrow.png" alt="">
                         </button>
                     </a>
-                </div>
-                <img draggable="false" src="assets/Optimus2.png" alt="model" class="img2">
+
+                <img draggable="false" src="#" alt="model" class="img2">
         </div>
 
     </header>
@@ -59,8 +61,16 @@
                     user-focused web experiences. With a strong foundation in modern design trends and a knack for troubleshooting hardware/software quirks, 
                     I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating Blender-rendered assets, 
                     I bring sci-fi aesthetics and futuristic vibes into every project I build.
-                </p>
+                </p> 
             </div>
+
+            <div class="profile-icon">
+                <a href="https://www.linkedin.com/in/harshit-gupta-473a44275/"><i class="fa-brands fa-linkedin" id="linkedIn"></i></a>
+                <a href="https://www.instagram.com/harshitgupta_2004/"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                <a href="https://github.com/root8Op"><i class="fa-brands fa-github" id="github"></i></a>
+                <a href="https://x.com/HarshitGupta_17"><i class="fa-brands fa-twitter" id="twitter"></i></a>
+            </div>
+           
 
         <!-- profile text 2 starts here -->
 
@@ -77,13 +87,48 @@
         </div>
 
         <!-- profile text 2 ends here -->
+    </section>
+
+    <section class="page3">
+                
         <div class="about" id="about">
 
             <h1>About</h1>
 
+            <div class="about-row">
+                <div class="about-icons">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-php"></i>
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="line"></div>
+                <div class="Bio">
+                    <p>
+                        My name is Harshit Gupta, and I am a passionate web developer with a keen interest in creating visually stunning and user-friendly web experiences.
+                        With a strong foundation in modern design trends and a knack for troubleshooting hardware/software quirks,
+                        I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating Blender-rendered assets,
+                        I bring sci-fi aesthetics and futuristic vibes into every project I build.
+                        <br>
+                        <br>
+                        I have been studying web development for over 2 years, and I have a strong foundation in HTML, CSS, and JavaScript, Jquery,
+                        php, and MySQL. I am also proficient in using various web development frameworks and libraries, such as React.js, Bootstrap, and Tailwind CSS.
+                        I am always eager to learn new technologies and improve my skills, and I am excited to take on new challenges in the field of web development.
+                        <br>
+                        <br>
+                        In addition to my technical skills, I am also a creative problem solver and a team player. I enjoy collaborating with others to create innovative solutions that meet the needs of users.
+                        I am also a strong communicator and can effectively convey complex technical concepts to non-technical stakeholders.
+                        I am always looking for new opportunities to grow and develop my skills, and I am excited to see where my career in web development will take me.
+                    </p>
+                </div>
+            </div>
+            <a href="#"><button>view resume</button></a>
         </div>
         
     </section>
+
+
 <!-- body of the webpage ends here -->
 
 

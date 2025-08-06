@@ -8,15 +8,64 @@
 
 header{
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     top: 0;
     font-family: 'Helvetica Neue', sans-serif;
 
 }
+
+header .logo  {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    top: 40px;
+    filter: drop-shadow(0 0 8px #000000);
+    z-index: 2;
+    left: 15%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+nav{
+    position: absolute;
+    background-color: #b40000;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 0; /* Ensures the nav is above the video */
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 60%;
+}
+
+
+
 .mainFrame{
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -26,28 +75,14 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: 0; /* Ensures the video is below the text */
+    z-index: -1; /* Ensures the video is below the text */
 }
 
-.overlay{
+
+
+.mainFrame h1{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; /* Ensures the overlay is above the video */
-
-
-}
-
-.overlay h1{
-    position: absolute;
-    top: 40%;
-    left: 65%;
+    margin-top: 100px;
     transform: translate(-50%, -50%);
     font-size: 68px;
     font-weight: 600;
@@ -71,10 +106,10 @@ header{
     }
 }
 
-.overlay p{
+.mainFrame p{
     position: absolute;
-    top: 60%;
-    left: 68%;
+    margin-top: 300px;
+    margin-left: 200px;
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-weight: 500;
@@ -96,10 +131,10 @@ header{
     }
 }
 
-.overlay button{
+.mainFrame button{
     position: absolute;
-    top: 78%;
-    left: 59%;
+    margin-top: 200px;
+    margin-left: -220px;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     font-size: 18px;
@@ -127,23 +162,23 @@ header{
     }
 }
 
-.overlay button a{
+.mainFrame button a{
     text-decoration: none;
     color: #ffffff;
     display: flex;
     align-items: center;
 }
-.overlay button img {
+.mainFrame button img {
     width: 20px;
     height: 20px;
     transition: transform 0.3s;
     display: block;
     filter: brightness(0) invert(1);
 }
-.overlay button:hover img{
+.mainFrame button:hover img{
     transform: translateX(5px);
 }
-.overlay button:hover{
+.mainFrame button:hover{
     background-color: #d26666; /* Change to a lighter shade on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
@@ -172,38 +207,7 @@ header{
 }
 
 
-nav{
-    position: absolute;
-    background-color: #b40000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 1; /* Ensures the nav is above the video */
-}
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 60px;
-}
-header h1 {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 600;
-    gap: 0;
-}
-
-nav #logo {
-    width: 150px;
-    height: 30px;
-    margin-left: 80px;
-}
 
 .page2{
     background-color: #b40000;
@@ -214,9 +218,62 @@ nav #logo {
 
 .page2 p{
     font-size: 16px;
-    color: #d26666;
+    color: #ffffff;
+    opacity: 0.5;
     line-height: 1.5;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Add any additional styles here */
 }
+.page2 p:hover{
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px; /* Space between icons */
+    margin-top: 15px; /* Space above icons */
+    margin-left: 65%;
+}
+
+.profile-icon i {
+    font-size: 32px;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.profile-icon i:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    opacity: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer; /* Change cursor to pointer on hover */
+    filter: drop-shadow(0 0 10px #ffffff);
+
+}
+
+.page2 h1, .page2 h2{
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.page2 h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
 
 .page2 h1{
     font-size: 40px;
@@ -233,8 +290,20 @@ nav #logo {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: fit-content;
-    left: -3%;
+    height: 600px;
+    -webkit-animation: scrollFadeIn 2s ease-out forwards;
+    animation: scrollFadeIn 2s ease-out forwards;
+    background-color: #b40000;
+}
+@keyframes scrollFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .profile img{
@@ -247,7 +316,7 @@ nav #logo {
 }
 
 .profileText2{
-    padding-top: 80px;
+    padding-top: 55px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -258,7 +327,7 @@ nav #logo {
     text-align: center;
 }
 
-.about{
+.page3{
     margin-top: 60px;
     position: relative;
     display: flex;
@@ -267,4 +336,90 @@ nav #logo {
     justify-content: center;
     width: 100%;
     height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.about h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #b40000;
+    text-align: center;
+    margin-top: 20px;
+}
+.about-row{
+    display: grid;
+    grid-template-columns: 100px 500px 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between icons, line, and paragraph */
+    width: 100%;/* Limit the width of the row */
+    margin: 0 auto; /* Center the row */
+    padding: 20px; /* Add some padding around the row */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-top: 40px;
+}
+
+.about-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    gap: 50px;
+}
+.about-icons i {
+    font-size: 32px;
+    color: #b40000;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.line {
+    width: 2px;                
+    height: 500px;            
+    background-color: #b40000;
+    filter: drop-shadow(0 0 10px #b40000);
+    margin: 20px auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.bio p{
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.6;
+    text-align: center;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.about button{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #b40000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 650px;
+    z-index: 1; /* Ensures the button is above the video */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    filter: drop-shadow(0 0 10px #b40000);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.about button a{
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.about button:hover{
+    background-color: #d26666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
