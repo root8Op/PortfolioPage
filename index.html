@@ -15,29 +15,44 @@
 </head>
 <body>
 <!-- head of the webpage starts from here -->
-    <header id="header" class="header"> 
+    <header id="header" class="header">
+        <!-- logo section -->
+        <div class="logo-container flex items-center">
+            <a href="" draggable="false" class="logo-link">
+                <img src="Assets/bb4.png" draggable="false" alt="logo" class="logo">
+            </a>
+        </div>
+        <!-- logo section ends here -->
+        <!-- Navigation Bar -->
+        <nav class="navbar"> 
 
-        <a href="" draggable="false"><img src="Assets/bb4.png" draggable="false" alt="logo" class="logo"></a>
-        <nav >  
-                <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12 font-medium text-[16px]">
-                        <li><a href="#home" draggable="false">Home</a></li>
-                        <li><a href="#about" draggable="false">About</a></li>
-                        <li><a href="#projects" draggable="false">Projects</a></li>
-                        <li><a href="#contact" draggable="false">Connect</a></li>
+                <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
+                        <li class="nav-item active"><a href="#home" draggable="false">Home</a></li>
+                        <li class="nav-item"><a href="#about" draggable="false">About</a></li>
+                        <li class="nav-item"><a href="#projects" draggable="false">Projects</a></li>
+                        <div class="indicator"></div>
+                       
+                            <li class="connect border-[1.5px] border-[#ffffff] rounded-full">
+                                <a href="#contact" draggable="false">
+                                Connect
+                                <img src="Assets/right-arrow.png" alt="">
+                                </a>
+                            </li>
+                        
                 </ul>
         </nav>
-        <div class="absolute inset-0 z-0 mainFrame" id="mainFrame">
+        <!-- navbar ends here -->
+        <!--hero section  -->
+        <div class="absolute z-1 mainFrame" id="mainFrame">
                     <h1 class="greetings">Greetings</h1>
                     <p>Crafting digital experiences with code and creativity.
                     <br>Let's build something amazing together!</p>
-                    <a href="#about" draggable="false">
-                        <button>
-                            Learn More
-                            <img src="Assets/right-arrow.png" alt="">
-                        </button>
-                    </a>
 
-                <img draggable="false" src="Assets/Avtar020.png" alt="model" class="img2">
+                    <div class="m-BContainer">
+                        <a href="#projects"><button>Learn More</button></a>
+                    </div>
+
+                <!-- <img draggable="false" src="Assets/Avtar020.png" alt="model" class="img2"> -->
         </div>
 
     </header>
