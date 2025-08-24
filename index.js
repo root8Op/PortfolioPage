@@ -24,3 +24,8 @@ window.addEventListener('load', () => {
 
 
 // gsap animations
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.ScrollTrigger.defaults({
+  toggleActions: "play none none reverse"
+});
