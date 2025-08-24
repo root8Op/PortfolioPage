@@ -21,3 +21,6 @@ window.addEventListener('load', () => {
 });
 
 // nav indicator ends here
+
+
+// gsap animations
