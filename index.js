@@ -1,3 +1,4 @@
+// nav indicator starts here
 const navItems = document.querySelectorAll('.nav-item');
 const indicator = document.querySelector('.indicator');
 
@@ -19,3 +20,4 @@ window.addEventListener('load', () => {
   if (activeItem) updateIndicator(activeItem);
 });
 
+// nav indicator ends here

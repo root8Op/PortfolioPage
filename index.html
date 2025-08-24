@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"> 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="src/output.css">
-    <link rel="icon" type="image/x-icon" href="Assets/bb1.png">
+    <link rel="icon" type="image/x-icon" href="Assets/x_icon(0).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,25 +16,27 @@
 <body>
 <!-- head of the webpage starts from here -->
     <header id="header" class="header">
+        <div class="bg-video"><video src="assets/miyamoto-musashi-manga-scroll-vagabond-moewalls-com.mp4" autoplay muted loop></video></div>
         <!-- logo section -->
         <div class="logo-container flex items-center">
             <a href="" draggable="false" class="logo-link">
-                <img src="Assets/bb4.png" draggable="false" alt="logo" class="logo">
+                <img src="Assets/bb4.png" draggable="false" alt="logo" class="logo z-3">
             </a>
         </div>
         <!-- logo section ends here -->
         <!-- Navigation Bar -->
         <nav class="navbar"> 
-
+                <!-- nav bar list-->
                 <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
                         <li class="nav-item active"><a href="#home" draggable="false">Home</a></li>
                         <li class="nav-item"><a href="#about" draggable="false">About</a></li>
                         <li class="nav-item"><a href="#projects" draggable="false">Projects</a></li>
                         <div class="indicator"></div>
-                       
-                            <li class="connect border-[1.5px] border-[#ffffff] rounded-full">
+                            <!-- connect button -->
+                            <li class="connect border-[1.5px] border-[#ffffffB] rounded-full">
                                 <a href="#contact" draggable="false">
                                 Connect
+                                <!-- arrow image -->
                                 <img src="Assets/right-arrow.png" alt="">
                                 </a>
                             </li>
@@ -43,16 +45,15 @@
         </nav>
         <!-- navbar ends here -->
         <!--hero section  -->
-        <div class="absolute z-1 mainFrame" id="mainFrame">
-                    <h1 class="greetings">Greetings</h1>
+        <div class="absolute mainFrame" id="mainFrame">
+                    <h1 class="greetings cursor-default">GREETINGS.</h1>
                     <p>Crafting digital experiences with code and creativity.
                     <br>Let's build something amazing together!</p>
 
                     <div class="m-BContainer">
-                        <a href="#projects"><button>Learn More</button></a>
+                        <a href="#projects"><button>Learn More <img src="Assets/right-arrow.png" alt=""></button></a>
                     </div>
 
-                <!-- <img draggable="false" src="Assets/Avtar020.png" alt="model" class="img2"> -->
         </div>
 
     </header>
@@ -89,7 +90,7 @@
 
         <!-- profile text 2 starts here -->
 
-            <div class="profileText2 text-wrap text-center grid grid-cols-2 ">
+            <div class="profileText2 text-wrap text-center grid grid-cols-2  cursor-default">
                 <div class="sec1">
                     <p class="font-medium">Born In</p>
                     <h3>India</h3>

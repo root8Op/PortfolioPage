@@ -15,6 +15,23 @@ header{
 
 }
 
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: brightness(200%);
+    z-index: 0;
+}
+
+.bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .logo-container > a{
     width: fit-content;
 }
@@ -24,7 +41,7 @@ header{
     width: 230px;
     height: 40px;
     top: 32px;
-    filter: drop-shadow(0 0 1px #000000);
+    filter: drop-shadow(0 0 4px #ffffff);
     z-index: 2;
     left: 15%;
     transition: transform 0.3s, filter 0.3s;
@@ -36,8 +53,8 @@ header{
 
 .navbar{
     position: absolute;
-    background-color: #b40000;
-    filter: drop-shadow(0 0 6px #b40000);
+    background-color: transparent;
+    filter: drop-shadow(0 0 4px #ffffff);
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -48,9 +65,9 @@ header{
     align-items: center;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    z-index: 0; /* Ensures the nav is above the video */
+    z-index: 1;
 }
 
 nav > ul{
@@ -65,12 +82,14 @@ nav > ul > li{
     vertical-align: top;
     display: inline-block;
     transition: color 0.3s ease;
+    color: #ffffff;
 }
 
 
 
 .nav-item.active {
-  color: #fff;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 
@@ -115,8 +134,19 @@ nav > ul > li::before {
     width: 20px;
     height: 20px;
     transition: transform 0.3s;
-    display: block;
     filter: brightness(0) invert(1);
+    display: block;
+}
+
+.connect:hover img{
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.connect:hover{
+    background-color: #d26666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 /* navbar ends here */
@@ -130,27 +160,26 @@ nav > ul > li::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0; /* Ensures the video is below the text */
+    z-index: 0;
     
 }
 
 
-
+/* text styling */
 .mainFrame h1{
     position: absolute;
-    top: 38%;
-    left: 50%;
+    top: 42%;
+    left: 20%;
     transform: translate(-50%, -50%);
     font-size: 55px;
     font-weight: 600;
     color: #ffffff;
-    -webkit-text-stroke: 2px #b40000;
     text-align: center;
-    z-index: 1; /* Ensures the text is above the video */
+    z-index: 1;
     opacity: 0;
     animation: fadeSlideUp 1.5s ease-out forwards;
     font-family: 'Helvetica Neue', sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.588);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.588);
 }
 
 @keyframes fadeSlideUp {
@@ -166,12 +195,13 @@ nav > ul > li::before {
 
 .mainFrame p{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    cursor: default;
+    top: 55%;
+    left: 23%;
     transform: translate(-50%, -50%);
     font-size: 18px;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     text-wrap: nowrap;
     text-decoration: double;
     width: 400px;
@@ -190,10 +220,10 @@ nav > ul > li::before {
         transform: translate(-50%, -50%);
     }
 }
-
+/* button styling */
 .m-BContainer{
-    margin-top: 100px;
-    margin-right: 100px;
+    margin-top: 150px;
+    margin-right: 1080px;
 }
 
 .m-BContainer  button{
@@ -206,8 +236,7 @@ nav > ul > li::before {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    filter: drop-shadow(0 0 10px #b40000);
+    /* filter: drop-shadow(0 0 10px #b40000); */
     display: flex;
     animation: fadeInButton 1.5s ease-out forwards;
     opacity: 0;
@@ -234,8 +263,22 @@ nav > ul > li::before {
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
+.m-BContainer img{
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+    display: block;
+    filter: brightness(0) invert(1);
+}
 
+.m-BContainer:hover img{
+    transform: translateX(30px);
+    opacity: 0;
+}
 
+/* hero section ends here */
+
+/* page 2 starts here */
 
 .page2{
     background-color: #b40000;
@@ -257,11 +300,7 @@ nav > ul > li::before {
     margin-right: auto;
     font-weight: 500;
     transition: color 0.3s ease, text-shadow 0.3s ease;
-    /* Add any additional styles here */
-}
-.page2 p:hover{
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    cursor: default;
 }
 
 
@@ -269,8 +308,8 @@ nav > ul > li::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px; /* Space between icons */
-    margin-top: 15px; /* Space above icons */
+    gap: 24px;
+    margin-top: 15px;
     margin-left: 65%;
 }
 
@@ -285,15 +324,16 @@ nav > ul > li::before {
     color: #ffffff;
     opacity: 0.9;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    cursor: pointer; /* Change cursor to pointer on hover */
+    cursor: pointer;
     filter: drop-shadow(0 0 10px #ffffff);
 
 }
 
-.page2 h1, .page2 h2{
+.page2 h1 {
     font-family: 'Helvetica Neue', sans-serif;
     text-align: center;
     margin-top: 20px;
+    cursor: default;
 }
 .page2 h2{
     font-size: 30px;
@@ -354,7 +394,9 @@ nav > ul > li::before {
     align-items: center;
     text-align: center;
 }
+/* page 2 ends here */
 
+/* page 3 starts here */
 .page3{
     margin-top: 60px;
     position: relative;
