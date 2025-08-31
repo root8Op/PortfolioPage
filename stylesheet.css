@@ -6,6 +6,16 @@
     margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Hide vertical scrollbar for the whole page */
+body {
+    overflow-x: hidden;
+}
+
 /* header code */
 
 header{
@@ -16,11 +26,11 @@ header{
 }
 
 .bg-video {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     filter: brightness(200%);
     z-index: 0;
@@ -73,8 +83,8 @@ header{
 nav > ul{
     display: flex;
     list-style: none;
-    gap: 70px;
-    margin-left: 60%;
+    gap: 60px;
+    margin-left: 58%;
 }
 
 nav > ul > li{
@@ -153,30 +163,40 @@ nav > ul > li::before {
 
 /* hero section starts here */
 .mainFrame{
-    position: relative;
+    position: absolute;
+    top: 100vh;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;
-    
+    z-index: 2;
 }
 
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
 
 /* text styling */
 .mainFrame h1{
     position: absolute;
     top: 42%;
-    left: 20%;
+    left: 28%;
     transform: translate(-50%, -50%);
     font-size: 55px;
     font-weight: 600;
     color: #ffffff;
     text-align: center;
     z-index: 1;
-    opacity: 0;
     animation: fadeSlideUp 1.5s ease-out forwards;
     font-family: 'Helvetica Neue', sans-serif;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.588);
@@ -197,7 +217,7 @@ nav > ul > li::before {
     position: absolute;
     cursor: default;
     top: 55%;
-    left: 23%;
+    left: 30%;
     transform: translate(-50%, -50%);
     font-size: 18px;
     font-weight: 400;
@@ -206,8 +226,7 @@ nav > ul > li::before {
     text-decoration: double;
     width: 400px;
     text-align: left;
-    z-index: 1; /* Ensures the text is above the video */
-    opacity: 0;
+    z-index: 1;
     animation: fadeInText 1.5s ease-out forwards;
 }
 @keyframes fadeInText {
@@ -223,7 +242,8 @@ nav > ul > li::before {
 /* button styling */
 .m-BContainer{
     margin-top: 150px;
-    margin-right: 1080px;
+    margin-right: 900px;
+    z-index: 1;
 }
 
 .m-BContainer  button{
@@ -236,10 +256,8 @@ nav > ul > li::before {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1;
-    /* filter: drop-shadow(0 0 10px #b40000); */
     display: flex;
     animation: fadeInButton 1.5s ease-out forwards;
-    opacity: 0;
     align-items: center;
     gap: 8px;
 }

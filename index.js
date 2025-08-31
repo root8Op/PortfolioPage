@@ -24,8 +24,61 @@ window.addEventListener('load', () => {
 
 
 // gsap animations
+
+
+
+// added gsap to the mainframe text
+
+
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.ScrollTrigger.defaults({
-  toggleActions: "play none none reverse"
+const tl = gsap.timeline({
+  scrollTrigger: {
+    scrub: true,
+    pin: true, 
+    trigger: ".bg-video",
+    start: "50% 50%",
+    endTrigger: ".page2",
+    end: "center 20%",
+  },
+});
+
+// added a animation in the hero section
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".mainFrame > *", {
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  ease: "power2.out",
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top center",
+    end: "bottom center",
+    toggleActions: "play reverse play reverse"
+  }
+});
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+  wrapper: ".header",   // outer container
+  content: ".mainFrame",   // inner scrollable content
+  smooth: 2.5,                  // smoothness factor
+  effects: true                 // enables ScrollTrigger effects
+});
+
+gsap.from(".mainFrame", {
+  scrollTrigger: {
+    trigger: ".mainFrame",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1
 });
