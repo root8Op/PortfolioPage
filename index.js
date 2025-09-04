@@ -1,3 +1,5 @@
+
+
 // nav indicator starts here
 const navItems = document.querySelectorAll('.nav-item');
 const indicator = document.querySelector('.indicator');
@@ -35,7 +37,8 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
   scrollTrigger: {
     scrub: true,
-    pin: true, 
+    pin: true,
+    anticipatePin: 1, 
     trigger: ".bg-video",
     start: "50% 50%",
     endTrigger: ".page2",
@@ -56,7 +59,7 @@ gsap.from(".mainFrame > *", {
   stagger: 0.2,
   scrollTrigger: {
     trigger: ".header",
-    start: "top center",
+    start: "top bottom",
     end: "bottom center",
     toggleActions: "play reverse play reverse"
   }
@@ -80,5 +83,13 @@ gsap.from(".mainFrame", {
   },
   y: 100,
   opacity: 0,
-  duration: 1
+  duration: 2
 });
+
+
+gsap.to(".overlay", ".greetings", ".para",{
+  opacity: 1,
+  duration: 1.5,
+  ease: "power2.out"
+});
+

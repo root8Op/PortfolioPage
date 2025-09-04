@@ -25,6 +25,8 @@ header{
 
 }
 
+/* background video */
+
 .bg-video {
     position: relative;
     top: 0;
@@ -32,6 +34,9 @@ header{
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
     filter: brightness(200%);
     z-index: 0;
 }
@@ -42,8 +47,11 @@ header{
     object-fit: cover;
 }
 
+/* logo styling */
+
 .logo-container > a{
     width: fit-content;
+    z-index: 6;
 }
 
 .logo-container .logo  {
@@ -51,7 +59,6 @@ header{
     width: 230px;
     height: 40px;
     top: 32px;
-    filter: drop-shadow(0 0 4px #ffffff);
     z-index: 2;
     left: 15%;
     transition: transform 0.3s, filter 0.3s;
@@ -64,7 +71,7 @@ header{
 .navbar{
     position: absolute;
     background-color: transparent;
-    filter: drop-shadow(0 0 4px #ffffff);
+    /* filter: drop-shadow(0 0 4px #ffffff); */
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -77,8 +84,10 @@ header{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    z-index: 1;
+    z-index: 5;
 }
+
+/* nav bar list */
 
 nav > ul{
     display: flex;
@@ -95,7 +104,7 @@ nav > ul > li{
     color: #ffffff;
 }
 
-
+/* nav bar indicator */
 
 .nav-item.active {
   color: #ffffff;
@@ -123,6 +132,7 @@ nav > ul > li::before {
     transition: transform 0.3s ease-in-out;
 }
 
+/* nav bar button */
 .connect{
     position: absolute;
     right: 20px;
@@ -164,7 +174,7 @@ nav > ul > li::before {
 /* hero section starts here */
 .mainFrame{
     position: absolute;
-    top: 100vh;
+    top: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -174,16 +184,26 @@ nav > ul > li::before {
     z-index: 2;
 }
 
+/* new zoom-in animation */
+
+#webframe{
+    animation-name: zoomin ;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+    from{transform: scale(0.5, 0.5);}
+    to{transform: scale(1, 1);}
+}
 
 
-.overlay{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background-color: transparent;
-    backdrop-filter: blur(20px);
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* text styling */
@@ -243,12 +263,17 @@ nav > ul > li::before {
 .m-BContainer{
     margin-top: 150px;
     margin-right: 900px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: fit-content;
     z-index: 1;
 }
 
 .m-BContainer  button{
     position: absolute;
-    padding: 10px 20px;
+    width: 140px;
+    height: fit-content;
+    padding: 10px 10px;
     font-size: 12px;
     color: #ffffff;
     background-color: #b40000;
@@ -257,8 +282,9 @@ nav > ul > li::before {
     cursor: pointer;
     z-index: 1;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     animation: fadeInButton 1.5s ease-out forwards;
-    align-items: center;
     gap: 8px;
 }
 @keyframes fadeInButton {
@@ -272,7 +298,7 @@ nav > ul > li::before {
     }
 }
 
-
+/* button hover */
 
 .m-BContainer  button:hover{
     background-color: #d26666;

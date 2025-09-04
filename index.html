@@ -17,7 +17,7 @@
 <!-- head of the webpage starts from here -->
     <header id="header" class="header">
         <div class="bg-video">
-            <video autoplay muted loop  id="myVideo" class="videoElement">
+            <video playsinline muted autoplay loop preload="auto" id="myVideo" class="videoElement">
                 <source src="./Assets/miyamoto-musashi-manga-scroll-vagabond-moewalls-com.mp4" type="video/mp4">
             </video>
         </div>
@@ -32,7 +32,7 @@
         <nav class="navbar"> 
                 <!-- nav bar list-->
                 <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
-                        <li class="nav-item active"><a href="#home" draggable="false">Home</a></li>
+                        <li class="nav-item active"><a href="#mainFrame" draggable="false">Home</a></li>
                         <li class="nav-item"><a href="#about" draggable="false">About</a></li>
                         <li class="nav-item"><a href="#projects" draggable="false">Projects</a></li>
                         <div class="indicator"></div>
@@ -50,9 +50,9 @@
         <!-- navbar ends here -->
         <!--hero section  -->
         <div class="absolute mainFrame" id="mainFrame">
-                    <div class="overlay"></div>
+                    <div class="overlay" id="webframe"></div>
                     <h1 class="greetings cursor-default" id="simpleUsage"></h1>
-                    <p>Crafting digital experiences with code and creativity.
+                    <p class="para">Crafting digital experiences with code and creativity.
                     <br>Let's build something amazing together!</p>
 
                     <div class="m-BContainer">
@@ -162,6 +162,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/8.8.7/index.umd.min.js"></script>
 <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
