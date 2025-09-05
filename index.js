@@ -38,12 +38,21 @@ const tl = gsap.timeline({
   scrollTrigger: {
     scrub: true,
     pin: true,
-    anticipatePin: 1, 
+    anticipatePin: 1,
+    force3D: true, 
     trigger: ".bg-video",
     start: "50% 50%",
     endTrigger: ".page2",
     end: "center 20%",
   },
+});
+
+ScrollTrigger.create({
+  trigger: ".video-wrapper",
+  pin: true,
+  start: "top top",
+  end: "+=1000",
+  scrub: true
 });
 
 // added a animation in the hero section
@@ -90,6 +99,6 @@ gsap.from(".mainFrame", {
 gsap.to(".overlay", ".greetings", ".para",{
   opacity: 1,
   duration: 1.5,
-  ease: "power2.out"
+  ease: "power2.out",
+  force3D: true,
 });
-
