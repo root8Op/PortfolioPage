@@ -351,8 +351,9 @@ nav > ul > li::before {
     transition: color 0.3s ease, text-shadow 0.3s ease;
     cursor: default;
 }
+/* profile code */
 
-
+/* icons */
 .profile-icon {
     display: flex;
     justify-content: center;
@@ -377,7 +378,7 @@ nav > ul > li::before {
     filter: drop-shadow(0 0 10px #ffffff);
 
 }
-
+/*  profile text  */
 .page2 h1 {
     font-family: 'Helvetica Neue', sans-serif;
     text-align: center;
@@ -423,6 +424,8 @@ nav > ul > li::before {
     }
 }
 
+/* profile Avtar Image */
+
 .profile img{
     width:220px;
     height: 200px;
@@ -460,6 +463,9 @@ nav > ul > li::before {
     background-color: #ffffff;
 }
 
+/* About section code */
+
+/* About text */
 .about h1{
     font-size: 40px;
     font-weight: 600;
@@ -479,7 +485,7 @@ nav > ul > li::before {
     flex-wrap: wrap;
     margin-top: 40px;
 }
-
+/* About icons */
 .about-icons {
     display: flex;
     flex-direction: column;
@@ -494,6 +500,8 @@ nav > ul > li::before {
     transition: transform 0.3s, color 0.3s;
 }
 
+/* seprator */
+
 .line {
     width: 2px;                
     height: 500px;            
@@ -503,6 +511,7 @@ nav > ul > li::before {
     transition: transform 0.3s, filter 0.3s;
 }
 
+/* bio text */
 .bio p{
     font-size: 16px;
     color: #000000;
@@ -512,6 +521,7 @@ nav > ul > li::before {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* resume button */
 .about button{
     padding: 10px 20px;
     font-size: 12px;
@@ -536,3 +546,8 @@ nav > ul > li::before {
     transform: scale(1.05);
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
+
+
+/* Index.html ends here */
+
+/* Skills.html starts here */
