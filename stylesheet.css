@@ -551,3 +551,31 @@ nav > ul > li::before {
 /* Index.html ends here */
 
 /* Skills.html starts here */
+
+/* default */
+.skpg{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    padding: 0;
+}
+
+/* circular shapes */
+
+.circle1{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 2px solid #000000;
+    /* background-color: #b40000; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.circle1 img{
+    height: 50px;
+}
