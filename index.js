@@ -1,4 +1,4 @@
-
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 // nav indicator starts here
 const navItems = document.querySelectorAll('.nav-item');
@@ -101,4 +101,17 @@ gsap.to(".overlay", ".greetings", ".para",{
   duration: 1.5,
   ease: "power2.out",
   force3D: true,
+});
+
+
+gsap.to("#tailwind", {
+  duration: 5,
+  repeat: -1,
+  ease: "none",
+  motionPath: {
+    path: "M150,150 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0",
+    align: "#tailwind",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
 });

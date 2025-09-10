@@ -570,12 +570,14 @@ nav > ul > li::before {
     height: 400px;
     width: 400px;
     border: 2px solid #000000;
-    /* background-color: #b40000; */
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .circle1 img{
     height: 50px;
+    position: absolute;
+    z-index: 1;
 }
