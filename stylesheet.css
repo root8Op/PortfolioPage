@@ -572,7 +572,7 @@ nav > ul > li::before {
   height: 300px;
   border-radius: 50%;
   border: 2px solid #b40000;
-  animation: spin 6s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 .circle i {
@@ -598,7 +598,7 @@ nav > ul > li::before {
       height: 250px;
       border-radius: 50%;
       border: 2px solid #b40000;
-      animation: spin 6s linear infinite;
+      animation: spin 8s linear infinite;
 }
 .circle3 {
     position: relative;
@@ -620,7 +620,7 @@ nav > ul > li::before {
     height: 150px;
     border-radius: 50%;
     border: 2px solid #b40000;
-    animation: spin 6s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .circle4 img{
