@@ -563,21 +563,62 @@ nav > ul > li::before {
     padding: 0;
 }
 
-/* circular shapes */
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* diameter of circular path */
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid #b40000;
+  animation: spin 6s linear infinite;
+}
 
-.circle1{
+.circle i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #b40000;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.circle2 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px; /* diameter of circular path */
+      height: 250px;
+      border-radius: 50%;
+      border: 2px solid #b40000;
+      animation: spin 6s linear infinite;
+}
+.circle3 {
     position: relative;
-    height: 400px;
-    width: 400px;
-    border: 2px solid #000000;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 200px; /* diameter of circular path */
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #b40000;
+    animation: spin 6s linear infinite;
 }
-
-.circle1 img{
-    height: 50px;
-    position: absolute;
-    z-index: 1;
+.circle4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* diameter of circular path */
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #b40000;
+    animation: spin 6s linear infinite;
 }
