@@ -19,10 +19,6 @@
         background-color: #b40000;
     }
 
-    body {
-        overflow: hidden;
-    }
-
 </style>
 <body>
 
@@ -73,8 +69,11 @@
 
         <!-- hero section -->
 
-        <div class="hero w-full h-full flex justify-center items-center">
+        <div class="hero w-full h-full flex justify-center items-center relative top-20">
 
+            <!-- web image -->
+            <img  class="absolute w-35 h-35" src="./Assets/Untitled-2.png" alt="web image">
+            
             <div class="circle">
                 <i class="fa-brands fa-html5"></i>
                 
@@ -98,13 +97,27 @@
                 </div>
 
             </div>
+
         </div>
         
         <!-- hero section ends here -->
 
         <!-- skills section starts here -->
-        <div class="skills">
-                
+        <div class="skills w-250 h-75 top-50 relative flex gap-60 justify-center items-center bg-[#b40000] border-none">
+
+            <!-- skill cards -->
+
+            <!-- designer card -->
+            <div class="designer">
+                <i class="fa-solid fa-layer-group text-[#ffff]"></i>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- frontend developer card -->
+            <div class="frontend">
+                <i class="fa-solid fa-laptop-code text-[#ffff]"></i>
+            </div>
 
         </div>
 
