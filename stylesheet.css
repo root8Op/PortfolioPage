@@ -206,7 +206,7 @@ nav > ul > li::before {
 }
 
 /* text styling */
-.mainFrame h1{
+.mainFrame > h1{
     position: absolute;
     top: 42%;
     left: 28%;
@@ -238,7 +238,7 @@ nav > ul > li::before {
 
 
 
-.mainFrame p{
+.mainFrame > p{
     position: absolute;
     cursor: default;
     top: 55%;
@@ -274,7 +274,7 @@ nav > ul > li::before {
     z-index: 1;
 }
 
-.m-BContainer  button{
+.m-BContainer > button{
     position: absolute;
     width: 140px;
     height: fit-content;
@@ -305,7 +305,7 @@ nav > ul > li::before {
 
 /* button hover */
 
-.m-BContainer  button:hover{
+.m-BContainer > button:hover{
     background-color: #d26666;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
@@ -336,7 +336,7 @@ nav > ul > li::before {
     padding-top: 100px;
 }
 
-.page2 p{
+.page2 > p{
     font-size: 16px;
     color: #ffffff;
     opacity: 0.5;
@@ -363,7 +363,7 @@ nav > ul > li::before {
     margin-left: 65%;
 }
 
-.profile-icon i {
+.profile-icon > i {
     font-size: 32px;
     color: #ffffff;
     transition: transform 0.3s, color 0.3s;
