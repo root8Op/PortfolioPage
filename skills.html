@@ -69,16 +69,16 @@
 
         <!-- hero section -->
 
-        <div class="hero w-full h-full flex justify-center items-center relative top-20">
+        <div class="hero w-full h-full flex justify-center items-center relative top-90">
 
             <!-- web image -->
             <img  class="absolute w-32 h-32" src="./Assets/Untitled-2.png" alt="web image">
             
-            <div class="circle">
+            <div class="circle z-0">
                 <i class="fa-brands fa-html5"></i>
                 
                 <!-- second circle -->
-                <div class="circle2">
+                <div class="circle2 z-0">
                     <i class="fa-brands fa-css3-alt"></i>
 
                     <!-- third circle -->
@@ -103,24 +103,36 @@
         <!-- hero section ends here -->
 
         <!-- skills section starts here -->
-        <div class="skills w-250 h-75 top-50 relative flex gap-60 justify-center items-center bg-[#b40000] border-none rounded-2xl">
+        <div class="skills w-[900px] h-max top-150 relative grid grid-cols-3  bg-[#b40000] border-none rounded-2xl">
 
             <!-- skill cards -->
 
             <!-- designer card -->
-            <div class="designer flex flex-col justify-center items-center">
-                <i class="fa-solid fa-layer-group text-[#ffff] "></i>
-                <h1 class="text-2xl font-bold text-[#ffffff] p-4">Designer</h1>
-                <p class="text-[#ffffff]">I value simple content structure,
-                    clean design patterns, 
-                    and thoughtful interactions.</p>
+            <div class="designer flex flex-col items-center relative left-15 top-10">
+                <i class="fa-solid fa-layer-group text-[#ffff] relative top-4 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-[#ffffff] relative top-6">Designer</h1>
+                <p class="text-[#ffffff] relative top-10">I believe great design is more than aesthetics 
+                    — it's about clarity, emotion, and cultural resonance. I specialize in:
+                </p>
+                <li class="text-[#ffff] relative top-14"><strong>Bold branding</strong> rooted in Indian culture, from color theory to font pairing</li>
+                <li class="text-[#ffff] relative top-14"><strong>Clean layouts</strong> with intuitive structure and visual hierarchy</li>
+                <li class="text-[#ffff] relative top-14"><strong>Cinematic animations</strong> that elevate storytelling and user engagement</li>
+                <li class="text-[#ffff] relative top-14"><strong>Minimalist principles</strong> blended with sci-fi and 2D/3D design elements</li>
+                <li class="text-[#ffff] relative top-14"><strong>Custom iconography</strong> for food, delivery, and ingredient branding</li>
             </div>
 
             <div class="divider"></div>
 
             <!-- frontend developer card -->
-            <div class="frontend">
-                <i class="fa-solid fa-laptop-code text-[#ffff]"></i>
+            <div class="frontend flex flex-col items-center relative right-15 top-10">
+                <i class="fa-solid fa-laptop-code text-[#ffff] relative top-4 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-[#ffffff] relative top-6">Front-end developer</h1>
+                <p class="text-[#ffffff] relative top-11">I build responsive, 
+                    immersive web experiences using modern technologies and creative logic. My toolkit includes:
+                </p>
+                <li class="text-[#ffffff] relative top-14"><strong>React, Next.js, Tailwind CSS, GSAP, ScrollTrigger, Locomotive Scroll</strong></li>
+                <li class="text-[#ffffff] relative top-14"><strong> HTML/CSS/JavaScript mastery</strong> for pixel-perfect execution</li>
+                <li class="text-[#ffffff] relative top-14"><strong>Rapid troubleshooting</strong> and seamless integration of new tools</li>
             </div>
 
         </div>

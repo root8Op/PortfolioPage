@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/* default code */
-*{
-    padding:0;
-    margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -274,7 +268,7 @@ nav > ul > li::before {
     z-index: 1;
 }
 
-.m-BContainer > button{
+.m-BContainer > a > button{
     position: absolute;
     width: 140px;
     height: fit-content;
@@ -305,7 +299,7 @@ nav > ul > li::before {
 
 /* button hover */
 
-.m-BContainer > button:hover{
+.m-BContainer > a > button:hover{
     background-color: #d26666;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
@@ -360,7 +354,7 @@ nav > ul > li::before {
     align-items: center;
     gap: 24px;
     margin-top: 15px;
-    margin-left: 65%;
+    margin-left: 60%;
 }
 
 .profile-icon > i {
@@ -603,7 +597,7 @@ nav > ul > li::before {
       height: 350px;
       border-radius: 50%;
       border: 2px solid #b40000;
-      animation: spin 8s linear infinite;
+      animation: spin 9s linear infinite;
 }
 .circle3 {
     position: relative;
@@ -614,7 +608,7 @@ nav > ul > li::before {
     height: 300px;
     border-radius: 50%;
     border: 2px solid #b40000;
-    animation: spin 6s linear infinite;
+    animation: spin 8s linear infinite;
 }
 .circle4 {
     position: relative;
@@ -625,7 +619,7 @@ nav > ul > li::before {
     height: 250px;
     border-radius: 50%;
     border: 2px solid #b40000;
-    animation: spin 4s linear infinite;
+    animation: spin 20s linear infinite;
 }
 
 .circle4 img{
@@ -643,7 +637,10 @@ nav > ul > li::before {
 
 .skills .divider{
     width: 0px;
-    height: 100px;
+    height: 600px;
     border: 1.5px solid #ffffff;
     border-radius: 20%;
+    position: relative;
+    margin: 20px;
+    left: 50%;
 }
