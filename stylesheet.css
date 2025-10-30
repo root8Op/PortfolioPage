@@ -637,7 +637,7 @@ nav > ul > li::before {
 
 .skills .divider{
     width: 0px;
-    height: 600px;
+    height: 550px;
     border: 1.5px solid #ffffff;
     border-radius: 20%;
     position: relative;
