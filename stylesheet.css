@@ -631,6 +631,18 @@ nav > ul > li::before {
     height: 20px;
 }
 
+.circle5 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* diameter of circular path */
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #b40000;
+    animation: spin 8s linear infinite;
+}
+
 .hero > i {
     height: 150px;
     width: 150px;
@@ -672,3 +684,4 @@ nav > ul > li::before {
     align-items: center;
 }
 
+/* Skill card styling ends here */
