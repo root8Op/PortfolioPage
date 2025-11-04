@@ -631,6 +631,14 @@ nav > ul > li::before {
     height: 20px;
 }
 
+.hero > i {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+}
 /* hero section ends here */
 
 /* Skill card styling */
@@ -664,11 +672,3 @@ nav > ul > li::before {
     align-items: center;
 }
 
-.hero > i {
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#ffffff;
-}
