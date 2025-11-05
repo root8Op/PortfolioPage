@@ -526,6 +526,7 @@ nav > ul > li::before {
     cursor: pointer;
     margin-top: 20px;
     margin-left: 650px;
+    margin-bottom: 20px;
     z-index: 1; /* Ensures the button is above the video */
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     filter: drop-shadow(0 0 10px #b40000);
