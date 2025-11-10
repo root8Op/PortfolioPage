@@ -1,13 +1,107 @@
 @import "tailwindcss";
 
-html {
+:root {
+  /* adjust if your scrollbar is wider/narrower on your system */
+  --scrollbar-width: 16px;
+}
+
+/* ensure body allows scrolling */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
+/* overlay: leave space for scrollbar and don't block pointer events */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: var(--scrollbar-width); /* leave scrollbar area visible */
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none; /* allow clicks/scrolling through overlay */
+}
+
+/* If overlay has interactive children, enable pointer events for them */
+.overlay * {
+  pointer-events: auto;
+}
+
+/* hero: keep it on-screen but do not remove page height */
+.mainFrame {
+  position: fixed; /* fixed keeps it visible but doesn't collapse document flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* push other pages under the hero so the page can scroll */
+.page2,
+.page3 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* ensure full height for scrolling */
+  padding-top: 100px; /* space for fixed navbar */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b40000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d26666;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #b40000 #f1f1f1;
+}
 
 /* Hide vertical scrollbar for the whole page */
 body {
-    overflow-x: hidden;
+    overflow-y: auto; /* allow vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    scrollbar-width: thin; /* Firefox: makes scrollbar thinner */
+    scrollbar-color: #b40000 #f3f4f6; /* Firefox: thumb color, track color */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #b40000;
+    border-radius: 6px;
+    border: 3px solid #f3f4f6;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #b40000;
 }
 
 /* header code */
@@ -193,10 +287,17 @@ nav > ul > li::before {
 
 
 .overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  /* allow scrolling and scrollbar clicks through the overlay */
+  pointer-events: none;
+}
+
+/* If overlay has interactive children, re-enable pointer events for them */
+.overlay * {
+  pointer-events: auto;
 }
 
 /* text styling */
