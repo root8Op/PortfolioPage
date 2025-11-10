@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "./src/output.css";
 
 :root {
   /* adjust if your scrollbar is wider/narrower on your system */
