@@ -18,6 +18,11 @@
     .navbar{
         background-color: #b40000;
     }
+    .pcard{
+        box-shadow: 0px 0px 2px #000;
+        border-radius: 20px;
+        overflow: hidden;
+    } 
 </style>
 <body>
 
@@ -68,11 +73,31 @@
     <section class="pjcont flex justify-center items-center">
         
         <h1 class="text-center absolute top-50 font-['Helvetica Neue', sans-serif] text-[25px] font-[700]">My Projects</h1>
-        <p class="text-center absolute top-60 font-['Helvetica Neue', sans-serif]">Here are a few past design projects I've worked on. Want to see more? <a href="mailto:webstar.coltd01@gmail.com" class=" text-[#b40000]">Email me.</a></p>
-        <div class="pContainer">
-            <div></div>
-            <div></div>
-            <div></div>
+        <p class="text-center absolute top-60 font-['Helvetica Neue', sans-serif]">Here are a few past design projects I've worked on. Want to see more? <a href="mailto:webstar.coltd01@gmail.com" class=" text-[#b40000]">Email me</a>.</p>
+        
+        <!-- Projects container -->
+        <div class="pContainer absolute top-80 p-[12px] grid grid-cols-2 gap-[200px] grid-rows-2">
+
+            <!-- project1 -->
+            <div class="pcard border-0 bg-[#ffff] w-[350px] h-[220px] flex flex-col justify-center items-center">
+
+                    <!-- project logo -->
+                    <img class="w-[350px] h-[220px]" src="./Assets/craveXmodule.jpg" alt="Project-CraveX">
+                    <p class="pcpara text-center font-[600] text-lg"> Delivering crispy and spicy <br>food with one click<br><br>
+                        <a href="https://task-1-phi-azure.vercel.app/"><button> view</button></a></p>
+                
+            </div>
+
+            <div class="pcard border-0 bg-[#ffff] w-[350px] h-[220px] flex justify-center items-center">
+
+                 <!-- project logo -->
+                    <img class="w-[350px] h-[220px]" src="./Assets/jobsPheremodule.jpg" alt="Project-JobsPhere">
+                    <p class="pcpara text-center font-[600] text-lg"> Search a jobs according <br>to your niche<br><br>
+                        <a href="https://root8op.github.io/PROJECT-JOBPORTAL/"><button> view</button></a></p>
+            </div>
+            <div class="pcard border-0 bg-[#ffff] w-[350px] h-[220px] flex justify-center items-center">
+                
+            </div>
             <div></div>
         </div>
     </section>
