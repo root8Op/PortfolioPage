@@ -18,7 +18,13 @@
     .navbar{
         background-color: #b40000;
     }
-    
+
+    .indicator{
+        opacity: 0;
+    }
+    .connect:hover > a > i{
+        transform: rotate(180deg);
+    }
 </style>
 <body>
 
@@ -42,7 +48,7 @@
 
                         <li ><a href="./index.html" draggable="false" class="nav-item">About</a></li>
                         <li ><a href="./skills.html" draggable="false" class="nav-item">Skills</a></li>
-                        <li ><a href="./projects.html" draggable="false" class="nav-item active">Projects</a></li>
+                        <li ><a href="./projects.html" draggable="false" class="nav-item">Projects</a></li>
                         
                         <!-- Nav indicator -->
                         <div class="indicator"></div>
@@ -50,11 +56,11 @@
                             <!-- connect button -->
 
                             <li class="connect border-[1.5px] border-[#ffffffB] rounded-full">
-                                <a href="#contact" draggable="false">
-                                Let's Connect
+                                <a href="./index.html" draggable="false">
+                                Return
 
                                 <!-- arrow image -->
-                                <img src="Assets/right-arrow.png" alt="">
+                                <i class="fa-solid fa-arrow-rotate-left w-[30px]"></i>
                                 </a>
                             </li>
                         
