@@ -25,6 +25,37 @@
     .connect:hover > a > i{
         transform: rotate(180deg);
     }
+    .form{
+        column-gap: 1rem;
+    }
+    .form textarea {
+        grid-column: 1 / span 2;
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: -50px;
+    }
+    .form > input{
+        padding: 0.5rem ;
+    }
+    .form > input::placeholder,
+    textarea::placeholder {
+        color: #888; 
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+    .cForm > button{
+        width: 200px;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background-color: #b40000;
+        color: #ffff;
+    }
+    .cForm > button:hover{
+        background-color: #d26666;
+        cursor: pointer;
+    }
 </style>
 <body>
 
@@ -71,7 +102,20 @@
     </header>
     <!-- header ends here -->
     
-
+    <!-- messaging form section -->
+     <section class="message">
+        <img class="w-[100px] h-[140px] absolute left-[45%] top-[15%] z-1" draggable="false" src="./Assets/Avtar020.png"  alt="">
+        <div class="w-full h-[1px] bg-[#cecece] absolute top-[30%]"></div>
+        <h1 class="text-center text-[40px] absolute top-[40%] left-[22%]">Thanks for taking the time to reach out. <br> How can I help you today?</h1>
+        <div class="cForm absolute top-[70%] left-[25%] flex flex-col justify-center items-center">
+            <form class="form grid grid-cols-2 grid-rows-2" action="https://formspree.io/f/xzzjbgbo" method="POST">
+                <input class="w-[20rem] h-[2rem] border" type="text" name="name" placeholder="Your Name" required>
+                <input class="w-[20rem] h-[2rem] border" type="email"name="email" placeholder="Your Email" required>
+                <textarea class="w-[40rem] border" placeholder="Your Message" rows="5" name="message" required></textarea>
+            </form>
+            <button type="submit" class="form-btn border">Send Message</button>
+        </div>
+     </section>
 
 
 <!-- Scripts for Functionality -->
