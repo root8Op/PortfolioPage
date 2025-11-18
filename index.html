@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" type="image/x-icon" href="Assets/x_icon(2).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home | Parichayah</title>
-    
+
 </head>
+
 <body>
-<!-- head of the webpage starts from here -->
+    <!-- head of the webpage starts from here -->
     <header id="header" class="header">
 
         <!-- background video -->
@@ -31,77 +35,96 @@
         </div>
         <!-- logo section ends here -->
         <!-- Navigation Bar -->
-        <nav class="navbar"> 
-                <!-- nav bar list-->
-                <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
-                        <li ><a href="./index.html" draggable="false" class="nav-item active">About</a></li>
-                        <li ><a href="/skills.html" draggable="false" class="nav-item">Skills</a></li>
-                        <li ><a href="./projects.html" draggable="false" class="nav-item">Projects</a></li>
-                        <div class="indicator"></div>
-                            <!-- connect button -->
-                            <li class="connect border-[1.5px] border-[#ffffffB] rounded-full">
-                                <a href="./contact.html" draggable="false">
-                                Let's Connect
-                                <!-- arrow image -->
-                                <img src="Assets/right-arrow.png" alt="">
-                                </a>
-                            </li>
-                        
-                </ul>
+        <nav class="navbar">
+            <!-- nav bar list-->
+            <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
+                <li><a href="./index.html" draggable="false" class="nav-item active">About</a></li>
+                <li><a href="/skills.html" draggable="false" class="nav-item">Skills</a></li>
+                <li><a href="./projects.html" draggable="false" class="nav-item">Projects</a></li>
+                <div class="indicator"></div>
+                <!-- connect button -->
+                <li class="connect border-[1.5px] border-[#ffffffB] rounded-full">
+                    <a href="./contact.html" draggable="false">
+                        Let's Connect
+                        <!-- arrow image -->
+                        <img src="Assets/right-arrow.png" alt="">
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <div class="logo">MySite</div>
+            <button class="hamburger" onclick="toggleMenu()">
+                ☰
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
         <!-- navbar ends here -->
         <!--hero section  -->
         <div class="absolute mainFrame" id="mainFrame">
-                    <div class="overlay" id="webframe"></div>
-                    <h1 class="greetings cursor-default" id="simpleUsage"></h1>
-                    <p class="para">Step into a world coded with <span class=" font-extrabold underline decoration-5 decoration-[#b40000]">PASSION</span> and painted with <span class=" font-extrabold underline decoration-5 decoration-[#b40000]">VISION</span>.
-                    <br>Let's build something amazing together!</p>
+            <div class="overlay" id="webframe"></div>
+            <h1 class="greetings cursor-default" id="simpleUsage"></h1>
+            <p class="para">Step into a world coded with <span
+                    class=" font-extrabold underline decoration-5 decoration-[#b40000]">PASSION</span> and painted with
+                <span class=" font-extrabold underline decoration-5 decoration-[#b40000]">VISION</span>.
+                <br>Let's build something amazing together!
+            </p>
 
-                    <div class="m-BContainer">
-                        <a href="./projects.html#projects">
-                            <button>
-                                Learn More 
-                                <!-- arrow png -->
-                                <img src="Assets/right-arrow.png" alt="">
-                            </button>
-                        </a>
-                    </div>
+            <div class="m-BContainer">
+                <a href="./projects.html#projects">
+                    <button>
+                        Learn More
+                        <!-- arrow png -->
+                        <img src="Assets/right-arrow.png" alt="">
+                    </button>
+                </a>
+            </div>
 
         </div>
 
     </header>
 
-<!-- head of the webpage ends here -->
+    <!-- head of the webpage ends here -->
 
-<!-- body of the webpage starts from here -->
- 
+    <!-- body of the webpage starts from here -->
+
     <section class="page2">
 
         <!-- profile section starts here -->
         <div class="profile">
             <div class="profileText1 text-wrap text-center grid grid-cols-3">
-                <div class="nameOccu">               
+                <div class="nameOccu">
                     <p>Web Developer & Frontend Designer</p>
                     <h1>Harshit Gupta</h1>
-                </div> 
+                </div>
                 <img src="Assets/profilePortfolio.jpg" draggable="false" alt="profile image" class="profileImg">
                 <p class=" font-medium text-justify relative right-8">
-                    I'm a frontend developer with a passion for crafting visually stunning, 
-                    user-focused web experiences. With a strong foundation in modern design trends and a knack for troubleshooting hardware/software quirks, 
-                    I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating Blender-rendered assets, 
+                    I'm a frontend developer with a passion for crafting visually stunning,
+                    user-focused web experiences. With a strong foundation in modern design trends and a knack for
+                    troubleshooting hardware/software quirks,
+                    I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating
+                    Blender-rendered assets,
                     I bring sci-fi aesthetics and futuristic vibes into every project I build.
-                </p> 
+                </p>
             </div>
 
             <div class="profile-icon">
-                <a href="https://www.linkedin.com/in/harshit-gupta-473a44275/"><i class="fa-brands fa-linkedin" id="linkedIn"></i></a>
-                <a href="https://www.instagram.com/mufasa.here_/"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                <a href="https://www.linkedin.com/in/harshit-gupta-473a44275/"><i class="fa-brands fa-linkedin"
+                        id="linkedIn"></i></a>
+                <a href="https://www.instagram.com/mufasa.here_/"><i class="fa-brands fa-instagram"
+                        id="instagram"></i></a>
                 <a href="https://github.com/root8Op"><i class="fa-brands fa-github" id="github"></i></a>
                 <a href="https://x.com/HarshitGupta_17"><i class="fa-brands fa-twitter" id="twitter"></i></a>
             </div>
-           
 
-        <!-- profile text 2 starts here -->
+
+            <!-- profile text 2 starts here -->
 
             <div class="profileText2 text-wrap text-center grid grid-cols-2  cursor-default">
                 <div class="sec1">
@@ -119,7 +142,7 @@
     </section>
 
     <section class="page3">
-                
+
         <div class="about" id="about">
 
             <h1>About</h1>
@@ -135,46 +158,56 @@
                 <div class="line"></div>
                 <div class="Bio">
                     <p>
-                        My name is Harshit Gupta, and I am a passionate web developer with a keen interest in creating visually stunning and user-friendly web experiences.
-                        With a strong foundation in modern design trends and a knack for troubleshooting hardware/software quirks,
-                        I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating Blender-rendered assets,
+                        My name is Harshit Gupta, and I am a passionate web developer with a keen interest in creating
+                        visually stunning and user-friendly web experiences.
+                        With a strong foundation in modern design trends and a knack for troubleshooting
+                        hardware/software quirks,
+                        I bridge creativity with functionality. Whether I'm optimizing webpage visuals or integrating
+                        Blender-rendered assets,
                         I bring sci-fi aesthetics and futuristic vibes into every project I build.
                         <br>
                         <br>
-                        I have been studying web development for over 2 years, and I have a strong foundation in HTML, CSS, and JavaScript, Jquery,
-                        php, and MySQL. I am also proficient in using various web development frameworks and libraries, such as React.js, Bootstrap, and Tailwind CSS.
-                        I am always eager to learn new technologies and improve my skills, and I am excited to take on new challenges in the field of web development.
+                        I have been studying web development for over 2 years, and I have a strong foundation in HTML,
+                        CSS, and JavaScript, Jquery,
+                        php, and MySQL. I am also proficient in using various web development frameworks and libraries,
+                        such as React.js, Bootstrap, and Tailwind CSS.
+                        I am always eager to learn new technologies and improve my skills, and I am excited to take on
+                        new challenges in the field of web development.
                         <br>
                         <br>
-                        In addition to my technical skills, I am also a creative problem solver and a team player. I enjoy collaborating with others to create innovative solutions that meet the needs of users.
-                        I am also a strong communicator and can effectively convey complex technical concepts to non-technical stakeholders.
-                        I am always looking for new opportunities to grow and develop my skills, and I am excited to see where my career in web development will take me.
+                        In addition to my technical skills, I am also a creative problem solver and a team player. I
+                        enjoy collaborating with others to create innovative solutions that meet the needs of users.
+                        I am also a strong communicator and can effectively convey complex technical concepts to
+                        non-technical stakeholders.
+                        I am always looking for new opportunities to grow and develop my skills, and I am excited to see
+                        where my career in web development will take me.
                     </p>
                 </div>
             </div>
-            <a href="./Assets/Resume_Final(1).pdf" target="_blank" ><button>view resume</button></a>
+            <a href="./Assets/Resume_Final(1).pdf" target="_blank"><button>view resume</button></a>
         </div>
-        
+
     </section>
 
 
-<!-- body of the webpage ends here -->
+    <!-- body of the webpage ends here -->
 
 
 
-<!-- Scripts for Functionality -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/8.8.7/index.umd.min.js"></script>
-<script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
-<script src="index.js"></script>
-<script>
-    new TypeIt("#simpleUsage", {
-        strings: ["GREETINGS."],
-        speed: 100,
-        waitUntilVisible: true
-    }).go();
-</script>
+    <!-- Scripts for Functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/8.8.7/index.umd.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <script src="index.js"></script>
+    <script>
+        new TypeIt("#simpleUsage", {
+            strings: ["GREETINGS."],
+            speed: 100,
+            waitUntilVisible: true
+        }).go();
+    </script>
 </body>
+
 </html>
