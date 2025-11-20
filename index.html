@@ -39,7 +39,7 @@
             <!-- nav bar list-->
             <ul class="hidden lg:flex text-[#ffffff] lg:gap-x-12  text-[13px] font-[Helvetica Neue] nav-links ">
                 <li><a href="./index.html" draggable="false" class="nav-item active">About</a></li>
-                <li><a href="/skills.html" draggable="false" class="nav-item">Skills</a></li>
+                <li><a href="./skills.html" draggable="false" class="nav-item">Skills</a></li>
                 <li><a href="./projects.html" draggable="false" class="nav-item">Projects</a></li>
                 <div class="indicator"></div>
                 <!-- connect button -->
@@ -53,16 +53,21 @@
 
             </ul>
         </nav>
-        <nav class="navbar">
-            <div class="logo">MySite</div>
+        <nav class="ham-nav">
+            <!-- connect button -->
             <button class="hamburger" onclick="toggleMenu()">
-                ☰
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+            <!-- nav bar list-->
+            <ul class="ham-links" id="hamLinks">
+                <li><a href="./index.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <!-- connect button -->
+                <li class="border-[2px] border-[#000] rounded-full hover:border-[#b40000] flex relative"><a href="./contact.html">Let's Connect
+                </a></li>
             </ul>
         </nav>
         <!-- navbar ends here -->
